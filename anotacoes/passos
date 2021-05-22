@@ -1,0 +1,43 @@
+yahoo! finance
+
+Bitcoin EUR(BTC-EUR)
+https://finance.yahoo.com/quote/BTC-EUR/history?period1=1568678400&period2=1618012800&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true
+
+baixar arquivo do yahoo finance
+
+TODO:
+usando numpy
+tratando dados nulos
+criar variáveis adicionais:
+-preço médio
+-moving averages 5,10,15,20,25,30 (média dos últimos 5 dias, 10 dias, e etc)
+
+definir valores previstos:
+-valores máximo, minimo e médio
+
+calcular retornos:
+-ret = (x(d)-x(d-1))/x(d-1)
+
+normalizar retornos:
+-média 0
+-desvio padrão 1
+
+dados dividos em 4 blocos:
+-buffer maior do que trinta dias (no inicio, para permitir lookback - quanto tempo você olha para trás - e ruido nos valores históricos)
+-treinamento (aleatório para fit e evaluate)
+-verificação
+
+Verificar que os valores reais podem ser recuperados dos valores normalizados e do retorno (se fazer a conta inversa dá o mesmo resultado)
+Para utilização final, treinar sobre todo o intervalo
+salvar e recuperar a rede treinada
+Forma fácil de definir várias redes diferentes
+Previsão feita sobre os últimos valores treinados e os ultimos valores importados
+Rede neural:
+- Input: Array 3d: Datas x Variáveis (Input) x Lookback
+- Output: Array 3d: Datas x Variáveis (Output) x Dias no futuro
+
+
+objetivo final: Valor de altas e baixas do bitcoin em euro no futuro
+
+
+DONE:

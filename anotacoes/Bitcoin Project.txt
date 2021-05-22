@@ -1,0 +1,50 @@
+Baixar dados do Yahoo Finance
+Importar no sistema
+Criar variáveis adicionais
+- preco médio
+- moving averages 5,10,15,20,25,30
+Definir valores previstos
+- Valores máximo, mínimo e médio
+Calcular retornos
+- retorno = (x(d)-x(d-1))/x(d-1)
+Normalizar retornos
+- média 0
+- desvio padrão 1
+Dados divididos em 4 blocos
+- buffer (no início, para permitir lookback e ruido nos valores históricos
+- Treinamento (aleatório para fit e evaluate)
+- Verificação
+Verificar que os valores reais podem ser recuperados dos valores normalizados e do retorno
+Para utilização final, treinar sobre todo o intervalo (tudo menos buffer)
+Salvar e recuperar a rede treinada
+Forma fácil de definir várias redes diferentes
+Previsão feita sobre os ultimos valores treinados e os ultimos valores importados
+Rede neural:
+- Input: Array 3d: Datas x Variáveis (Input) x Lookback
+- Outpu: Array 3d: Datas x Variáveis (Output) x Dias no futuro
+
+ClsMae
+self.ObjNetwork = rede
+-CreateNN
+-DefinarNN (Ovr)
+-CompileNN
+-TreinarTestes
+-AvaliarTestes
+-TreinarFinal
+-Salvar
+-Forecast
+
+ClsFilha_Carregar
+-Carregar
+
+ClsFilha_Densa
+-DefinarNN (Ovr)
+
+ClsFilha_Convolutional
+-DefinarNN (Ovr)
+
+ClsFilha_Deep
+-DefinarNN (Ovr)
+
+ClsFilha_Recurring
+-DefinarNN (Ovr)
